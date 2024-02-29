@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Research\\Research-Work\\Site\\backend\\WebBackend\\WebBackend.csproj": {}
+    "D:\\Research\\Research-Work\\Site\\Backend\\WebBackend\\WebBackend.csproj": {}
   },
   "projects": {
-    "D:\\Research\\Research-Work\\Site\\backend\\WebBackend\\WebBackend.csproj": {
+    "D:\\Research\\Research-Work\\Site\\Backend\\WebBackend\\WebBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Research\\Research-Work\\Site\\backend\\WebBackend\\WebBackend.csproj",
+        "projectUniqueName": "D:\\Research\\Research-Work\\Site\\Backend\\WebBackend\\WebBackend.csproj",
         "projectName": "WebBackend",
-        "projectPath": "D:\\Research\\Research-Work\\Site\\backend\\WebBackend\\WebBackend.csproj",
+        "projectPath": "D:\\Research\\Research-Work\\Site\\Backend\\WebBackend\\WebBackend.csproj",
         "packagesPath": "C:\\Users\\Павел\\.nuget\\packages\\",
-        "outputPath": "D:\\Research\\Research-Work\\Site\\backend\\WebBackend\\obj\\",
+        "outputPath": "D:\\Research\\Research-Work\\Site\\Backend\\WebBackend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,6 +45,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.16, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
