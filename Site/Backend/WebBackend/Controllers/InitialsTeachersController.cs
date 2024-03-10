@@ -47,14 +47,14 @@ namespace WebBackend.Controllers
             _context.InitialsTeachers.Add(initialsTeachers);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetInitialsTeachers", new { id = initialsTeachers.Registration_number }, initialsTeachers);
+            return CreatedAtAction("GetInitialsTeachers", new { id = initialsTeachers.Id }, initialsTeachers);
         }
 
         // PUT: api/InitialsTeachers/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutInitialsTeachers(int id, InitialsTeachers initialsTeachers)
         {
-            if (id != initialsTeachers.Registration_number)
+            if (id != initialsTeachers.Id)
             {
                 return BadRequest();
             }
@@ -99,7 +99,7 @@ namespace WebBackend.Controllers
 
         private bool InitialsTeachersExists(int id)
         {
-            return _context.InitialsTeachers.Any(e => e.Registration_number == id);
+            return _context.InitialsTeachers.Any(e => e.Id == id);
         }
     }
 }
