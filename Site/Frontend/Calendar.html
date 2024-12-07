@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Календарь с отметками посещения</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+
+    .calendar {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        margin-top: 20px;
+        user-select: none;
+    }
+
+    .day {
+        padding: 10px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+    }
+
+    .status-modal {
+        position: fixed;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 20px;
+        border: 1px solid #ccc;
+        z-index: 999;
+        display: none;
+    }
+
+    .status-modal select {
+        padding: 5px;
+        margin: 10px 0;
+    }
+
+    .month {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .present {
+        background-color: lightgreen;
+    }
+
+    .sick {
+        background-color: lightyellow;
+    }
+
+    .absent {
+        background-color: lightcoral;
+    }
+
+    .day.selected {
+    background-color: lightblue;
+    color: rgb(0, 0, 0);
+    border-radius: 5%;
+    user-select: none;
+    opacity: 50%;
+    }
+</style>
+</head>
+<body>
+<div class="month" id="currentMonth"></div>
+
+<div class="calendar" id="calendar"></div>
+
+<div class="status-modal">
+    <h3>Выберите статус</h3>
+    <p></p>
+    <select id="statusSelect">
+        <option value="присутствовал">Присутствовал</option>
+        <option value="больничный">Больничный</option>
+        <option value="отсутствовал">Отсутствовал</option>
+    </select>
+    <button onclick="saveStatus()">Сохранить</button>
+    <button onclick="cleanChoice()">Отчистить</button>
+</div>
+<br>
+<button onclick="fillSelectedDays()">Заполнить выделенные дни</button><br><br>
+<button onclick="clearSelectedDays()">Снять выделенные</button>
+<script  src="calendarScript.js"></script><br><br>
+
+<select id="teachersSelect"></select>
+
+<button id="pushDays">Записать</button>
+</body>
+</html>
