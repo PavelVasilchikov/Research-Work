@@ -6,34 +6,35 @@ using WebBackend;
 ServicePointManager.ServerCertificateValidationCallback +=
            (sender, cert, chain, sslPolicyErrors) => true;
 
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Настройка CORS
+// Настройка CORS
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("ReactJSDomain",
-        policy => policy.WithOrigins("http://localhost:7249")
-        .AllowAnyHeader()
-        .AllowAnyMethod()
-        .AllowAnyOrigin()
-        );
+    options.AddPolicy("AllowAll",
+        builder => builder
+            .WithOrigins("http://localhost:8080") // явное перечисление источников
+            .AllowAnyMethod()
+            .AllowAnyHeader()
+            .AllowCredentials());
 });
 
+
+
+// Настройка базы данных
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("Server=localhost;Database=TeachersDB;Trusted_Connection=True;TrustServerCertificate=true"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Server=host.docker.internal,1433;Database=TeachersDB;User Id=sa;Password=YourNewPassword123;TrustServerCertificate=true;"));
 });
 
 var app = builder.Build();
-
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -42,10 +43,11 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseCors("AllowAll");
+
+
 app.UseAuthorization();
 
 app.MapControllers();
-
-app.UseCors("ReactJSDomain");
 
 app.Run();

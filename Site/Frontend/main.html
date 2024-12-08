@@ -3,11 +3,19 @@
 <head>
     <meta charset="utf-8">
     <title>Моя HTML страница</title>
+    
     <!--<script src="script.js"></script> -->
 </head>
 <body>
+    <input type="file" id="fileInput">
+    <button onclick="sendFile()">Choose File</button>
+    <script src="copePathFile.js"></script>
+
     <button id="getRequestButton">Get Initials Teachers</button>
     <ul id="teachersList"></ul>
+
+    Отфильтрованный результат
+    <ul id="teachersListFiltered"></ul>
     <script src="getAllTeachers.js"></script>
 
     <h1>Добавить преподавателя</h1>
@@ -16,7 +24,18 @@
     <button id="addTeacherButton">Добавить</button>   
     <script src="postNewTeacher.js"></script>
 
+    <h2>Удалить преподавателя</h2>
+    <select id="deleteTeachers"></select>
+    <button id="deleteTeacherButton">Удалить</button>
+    <script src="deleteTeacher.js"></script>
+    
+
+
+    <br>
+    <br>
     <button id="writeToExcelButton">Записать в Excel</button>
     <script src="writeToExcelScript.js"></script>
+    
+    <a href = "Calendar.html">Календарь</a>
 </body>
 </html>

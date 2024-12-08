@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "W28ZcIpK3solaq7Qy0X2mOioDOX9z4wO8K8Moi8U+mjEfdzepLPFupIwyb+GJAnva9mJ2mx1oZiQtb0oM1dUpw==",
+  "dgSpecHash": "LsnEI7DW5WG6/oHKU7l1lav4ZQa+85s/uDTHgvUsfrcfzG6bI9XONXQ2U+3SKjpVAss/JmrDvJYr4BEUwSzqNw==",
   "success": true,
   "projectFilePath": "D:\\Research\\Research-Work\\Site\\Backend\\WebBackend\\WebBackend.csproj",
   "expectedPackageFiles": [
@@ -47,6 +47,7 @@
     "C:\\Users\\Павел\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\Павел\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\Павел\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
+    "C:\\Users\\Павел\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.0\\microsoft.visualstudio.azure.containers.tools.targets.1.17.0.nupkg.sha512",
     "C:\\Users\\Павел\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\Павел\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "C:\\Users\\Павел\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
